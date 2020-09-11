@@ -1,0 +1,24 @@
+from peewee import SqliteDatabase, AutoField, CharField, DateField, ForeignKeyField, Model
+
+class Profesores(Model):
+   maestro_id = AutoField()
+   nombre = CharField()
+   apellido = CharField()
+   telefono = CharField()
+   email = CharField(unique=True)
+
+   class Meta:
+       database = db
+
+
+	   
+db.connect()
+db.create_tables([Profesores, Clases])
+
+
+insert
+chamo = Profesores( nombre='Chamo',
+                   apellido='Linares',
+                   telefono='640568923',
+                   email='alinares@paradigmadigital.com')
+chamo.save()
