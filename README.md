@@ -1,1 +1,1 @@
-# facilito
+# manejo de OMR
